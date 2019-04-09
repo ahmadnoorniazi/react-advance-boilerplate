@@ -1,0 +1,16 @@
+
+{
+    "presets": [
+        "@babel/preset-env",
+        "@babel/preset-react",
+       "@babel/preset-typescript"
+    ]
+    ,
+	"plugins": [
+    "dynamic-import-node",
+    "@babel/plugin-transform-async-to-generator",
+	"@babel/proposal-class-properties",
+      "@babel/plugin-proposal-object-rest-spread",
+      "@babel/plugin-syntax-dynamic-import",
+    ]
+}
