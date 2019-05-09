@@ -24,21 +24,14 @@ So, by using this **Templater** you will save a lot of time and will stay focuse
 1. Clone the repo on your Machine by:
 
    ```
-    git clone https://github.com/BiosBoy/coconat.git
+    git clone https://github.com/ahmadnoorniazi/react-advance-boilerplate
    ```
-2. Inside the root folder install all requeried packages of the **CoConat Builder** by command:
+2. Start up your project via **development**, **production** or **test** compilation:
    ```
-    yarn lerna bootstrap
-   ```
-3. Start up your project via **development**, **production** or **test** compilation:
-   ```
-    yarn start:dev - development mode
-    yarn start:prod - production mode
-    yarn start:test - testing mode
-   ```
-4. Test and validate yout project code with **Jest & Enzyme** test environment by command:
-   ```
-    yarn jest ./*/**.test.*
+    npm run dev  - development mode
+    npm run prod - production mode
+    npm run test - testing mode
+    npm tun test:watch - testing wtch mode
    ```
 That's all what you need to start building your own project! Have fun and happy coding! :)
 
