@@ -1,4 +1,4 @@
-react-advance-boilerplate
+react-advance-boilerplate ⚡️
 =====================
 
 This **Webpack4 + React16 Templater** is created from the point of view to solve developer day-to-day problems with app suits boilerplate creation. It has all what we need to start React app creation with rocket speed without worring about, like:
