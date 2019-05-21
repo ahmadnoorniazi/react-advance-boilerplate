@@ -1,24 +1,24 @@
 const path = require('path');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const webpackMerge = require('webpack-merge')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const webpack = require('webpack')
 const modeConfig = env => require(`./build-utils/webpack.${env}`)(env)
+const presetConfig = presets => require(`./build-utils/presets/webpack.${presets}`)(presets);
 
 const PATHS = {
   src: path.join(__dirname, './src'),
   dist: path.join(__dirname, './dist')
 };
 
-module.exports = ({ mode } = { mode: 'production', presets: [] }) => {
+module.exports = ({ mode = "production" , presets= []}) => {
   return webpackMerge({
     mode,
     output: {
       // the output bundle
-      filename: 'bundle.js',
+      filename: 'js/bundle.[hash].js',
       // the output chunk bundle
-      chunkFilename : '[name].chunk.js',
+      chunkFilename : 'js/[name].chunk.[hash].js',
 
       // output directory
       path: PATHS.dist,
@@ -32,13 +32,9 @@ module.exports = ({ mode } = { mode: 'production', presets: [] }) => {
         name: false,
         cacheGroups: {
             vendor: {
-                name: 'vendorss',
+                name: 'vendors',
                 test: /[\\/]node_modules[\\/]/,
-            },
-            common: {
-                name: 'common',
-                test: path.join(__dirname, 'src'),
-            },
+            }
         }
       },
       runtimeChunk: true
@@ -52,7 +48,7 @@ module.exports = ({ mode } = { mode: 'production', presets: [] }) => {
         test: /\.(js|jsx)$/,
         include: path.resolve(__dirname, 'src'),
           use: [
-            'babel-loader','eslint-loader'
+            'babel-loader'
           ],
           exclude: /node_modules/
       },
@@ -63,17 +59,6 @@ module.exports = ({ mode } = { mode: 'production', presets: [] }) => {
         },
           // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
         { enforce: 'pre', test: /\.js$/, loader: 'source-map-loader' },
-
-        // Style loaders
-
-        {
-          test: /\.scss$/,
-          use: [
-              "style-loader", // creates style nodes from JS strings
-              "css-loader", // translates CSS into CommonJS
-              "sass-loader" // compiles Sass to CSS, using Node Sass by default
-          ]
-        },
 
         {
           test: /\.(jpe?g|png|gif|svg)$/i,
@@ -91,13 +76,13 @@ module.exports = ({ mode } = { mode: 'production', presets: [] }) => {
     },
 
     plugins: [
-      new BundleAnalyzerPlugin(),
       new HtmlWebpackPlugin({
         template:"./index.html"
       }),
       new webpack.ProgressPlugin(),
-      new CleanWebpackPlugin(['dist'])
+      new CleanWebpackPlugin()
     ]
-  },modeConfig(mode))
+  }, modeConfig(mode),
+  presets.length && presetConfig(presets))
 
 };

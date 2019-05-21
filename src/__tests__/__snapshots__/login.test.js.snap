@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should test for login  1`] = `
+<div
+  class="form-box"
+>
+  <div
+    class="head"
+    name="loginForm"
+  >
+    Login Form
+  </div>
+  <form>
+    <div
+      class="form-group"
+    >
+      <label
+        class="label-control"
+        for="email"
+      >
+        Email
+      </label>
+      <input
+        id="email"
+        name="email"
+        placeholder="User Name"
+        type="text"
+        value="admin"
+      />
+    </div>
+    <div
+      class="form-group"
+    >
+      <label
+        class="label-control"
+        for="password"
+      >
+        Password
+      </label>
+      <input
+        id="password"
+        name="password"
+        placeholder="password"
+        type="password"
+        value="admin"
+      />
+    </div>
+    <button
+      class="submit"
+      name="Submit"
+      type="submit"
+      value="Submit"
+    >
+      Submit
+    </button>
+  </form>
+</div>
+`;

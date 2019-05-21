@@ -8,7 +8,7 @@ module.exports = () => ({
     entry: [
         'react-hot-loader/patch',
         // activate HMR for React
-        'webpack-dev-server/client?http://localhost:1234',
+        'webpack-dev-server/client?http://localhost:7070',
         // bundle the client for webpack-dev-server
         // and connect to the provided endpoint
 
@@ -18,24 +18,6 @@ module.exports = () => ({
         PATHS.src
         // the entry point of our app
   ],
-  optimization: {
-    splitChunks: {
-      chunks: "all",
-      name: false,
-      cacheGroups: {
-          vendor: {
-              name: 'vendorss',
-              test: /[\\/]node_modules[\\/]/,
-          },
-          common: {
-              name: 'common',
-              test: path.join(__dirname, 'src'),
-          },
-      }
-    },
-    runtimeChunk: true
-
-  },
     devtool: 'cheap-source-map',
     module: {
         rules: [
@@ -56,9 +38,9 @@ module.exports = () => ({
     devServer: {
         compress: true,
         host: 'localhost',
-        port: 1234,
+        port: 7070,
         contentBase: PATHS.dist,
-        publicPath: 'http://localhost:1234/',
+        publicPath: 'http://localhost:7070/',
         historyApiFallback: true,
         // respond to 404s with index.html
         hot: true,
@@ -66,14 +48,14 @@ module.exports = () => ({
         stats: { colors: true, chunks:true },
         // enable HMR on the server
         // open the browser when start server
-      open: true,
-      inline: true,
-        watchOptions: {
-          ignored: /node_modules/
-        },
-        overlay: {
-          warnings: true,
-          errors: true
+        open: true,
+        inline: true,
+          watchOptions: {
+            ignored: /node_modules/
+          },
+          overlay: {
+            warnings: true,
+            errors: true
+          }
         }
-      }
 })

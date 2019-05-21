@@ -1,0 +1,87 @@
+body {
+  background-color: #222;
+}
+
+.heading {
+  color: #222;
+  font-size: 20px;
+  font-weight: normal;
+  padding: 05px 0;
+  text-align: center;
+  text-transform: uppercase;
+  background: #61dafb;
+}
+
+h3 {
+  border: 2px solid #61dafb;
+  border-radius: 15px;
+  background-color: #222;
+  color: #61dafb;
+  width: 400px;
+
+}
+
+.message-field {
+  float: left;
+  font-size: 20px;
+  display: block;
+  width: 96.3%;
+  padding: 30px;
+  border: none;
+  background-color: #61dafb;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.Message--main {
+  padding: 1em;
+}
+
+li {
+  list-style-type: none;
+  border: 2px solid #ccc;
+  padding: 30px;
+  margin: 10px;
+  background-color: #222;
+  color: #61dafb;
+
+}
+
+.Message--content {
+  margin: 0;
+  display: block;
+  float: left;
+}
+
+.Message--user {
+  margin: 0;
+  float: left;
+  align-items: flex-start;
+  margin-top: -20px
+}
+
+.Message {
+  display: flex;
+  margin-bottom: 1em;
+  display: block;
+  margin-left: -60px;
+}
+
+.log-out {
+  float: right;
+  margin-top: -63px;
+  margin-right: 0px;
+}
+
+.logOut-btn {
+  font-weight: bold;
+  font-size: 20px;
+  background-color: #222;
+  padding: 5px;
+  border-radius: 10px;
+  color: #61dafb;
+  width: 150px;
+
+
+}

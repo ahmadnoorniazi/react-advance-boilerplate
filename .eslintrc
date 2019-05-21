@@ -8,28 +8,38 @@
     "prettier/react"
   ],
   "rules": {
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/jsx-filename-extension": [1, {
+      "extensions": [".js", ".jsx"]
+    }],
     "react/prop-types": 0,
-    "react/jsx-no-bind":0,
+    "react/jsx-no-bind": 0,
     "jsx-a11y/label-has-for": 0,
     "no-console": 1,
-    "import/no-unresolved": [2, {"commonjs": true, "amd": true}],
-  "import/named": 2,
-  "import/namespace": 2,
-  "import/default": 2,
-  "import/export": 2,
-  "getter-return":0,
-  "for-direction":"off",
-  "arrow-parens": 0,
-  "prefer-const": 1,
-  "no-var":"error"
+    "import/no-unresolved": [2, {
+      "commonjs": true,
+      "amd": true
+    }],
+    "import/named": 2,
+    "import/namespace": 2,
+    "import/default": 2,
+    "import/export": 2,
+    "getter-return": 0,
+    "for-direction": "off",
+    "arrow-parens": 0,
+    "prefer-const": 1,
+    "no-var": "error",
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "jest/valid-expect": "error"
 
   },
   "settings": {
-      "react": {
-        "pragma": "React",
-        "version": "detect"
-      },
+    "react": {
+      "pragma": "React",
+      "version": "detect"
+    },
     "import/resolver": {
       "node": {
         "extensions": [
@@ -41,20 +51,21 @@
       }
     }
   },
-  "plugins": ["react", "import", "jsx-a11y"],
+  "plugins": ["react", "import", "jsx-a11y", "jest"],
   "parser": "babel-eslint",
   "parserOptions": {
     "ecmaVersion": 2018,
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true,
-      "arrowFunctions":true,
-      "classes":true
+      "arrowFunctions": true,
+      "classes": true
     }
   },
   "env": {
     "es6": true,
     "browser": true,
-    "node": true
+    "node": true,
+    "jest": true
   }
 }

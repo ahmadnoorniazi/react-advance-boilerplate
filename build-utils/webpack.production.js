@@ -17,20 +17,16 @@ module.exports = () => ({
           {
             test: /\.css$/,
             use: [MiniCssExtractPlugin.loader,
-            {
-              loader: require.resolve( 'css-loader' ), options: {url:false, sourceMap:true}
-              },
-              {
-              loader: 'sass-loader', options: { sourceMap: true }
-            }
+              "css-loader",
+              "sass-loader"
           ]
           }
         ]
     },
     devtool: 'source-map',
-   optimization: {
-    removeAvailableModules: false,
-      minimizer: [
+    optimization: {
+      removeAvailableModules: false,
+       minimizer: [
         new TerserJSPlugin({
           terserOptions: {
             parse: {
@@ -78,7 +74,8 @@ module.exports = () => ({
       //minify css for production
     new MiniCssExtractPlugin({
         //minified filename
-        filename: "style.css",
+        filename: "css/[name].css",
+        chunkFilename: 'css/[name].css'
       }),
     new HtmlWebpackLoader({
         //make html file

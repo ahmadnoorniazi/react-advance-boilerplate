@@ -1,0 +1,93 @@
+body {
+  background-image: url('https://images.pexels.com/photos/259915/pexels-photo-259915.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')
+}
+
+.form-box {
+  margin: 30px auto;
+  max-width: 500px;
+  background-color: #2d2d2d;
+  margin-top: 200px;
+}
+
+.head {
+  color: #fff;
+  font-size: 34px;
+  font-weight: normal;
+  padding: 30px 0;
+  text-align: center;
+  text-transform: uppercase;
+  background: #61dafb;
+  border: 2px solid #222;
+}
+
+.form-group {
+  padding: 20px;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+input[type="submit"],
+.submit {
+  background: #61dafb;
+  border: none;
+  border-radius: 2px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin: 5px 0;
+  outline: medium none;
+  overflow: hidden;
+  padding: 10px;
+  text-transform: uppercase;
+  transition: all 0.15s ease-in-out 0s;
+  width: 100%;
+  box-shadow: 0 1px 2px 0px rgba(0, 0, 0, 0.16), 0 1px 2px 0px rgba(0, 0, 0, 0.23);
+}
+
+input[type="submit"]:hover {
+  background: #4b81eb;
+  box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.16), 0 2px 4px 0px rgba(0, 0, 0, 0.23);
+}
+
+.form-group>input {
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 300px;
+  border: none;
+  outline: yellow;
+  border-bottom: 1px solid #757575;
+  right: auto;
+  left: auto;
+  margin-left: 80px;
+}
+
+.form-box>input:focus {
+  outline: none;
+}
+
+label {
+  color: #61dafb;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* active state */
+.form-box>input:focus~label,
+input:valid~label {
+  top: -20px;
+  font-size: 14px;
+  color: #5264AE;
+}

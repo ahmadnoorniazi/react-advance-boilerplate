@@ -1,16 +1,32 @@
 {
-    "compilerOptions": {
-        "outDir": "./dist/",
-        "allowJs": true,
-        "noEmit": true,
-        "sourceMap": true,
-        "noImplicitAny": true,
-        "module": "commonjs",
-        "target": "es6",
-        "jsx": "react"
-    },
-    "include": [
-        "./src/**/*"
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "allowJs": true,
+    "noEmit": true,
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "module": "esnext",
+    "target": "es6",
+    "jsx": "preserve",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
     ],
-    "exclude": ["./dist/","node_modules/*"]
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true
+  },
+  "include": [
+    "./src/**/*"
+  ],
+  "exclude": [
+    "./dist/",
+    "node_modules/*"
+  ]
 }
