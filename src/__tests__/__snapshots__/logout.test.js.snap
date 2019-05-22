@@ -1,5 +1,58 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`should test for logout  1`] = `
+<div>
+  <div
+    class="heading"
+  >
+    <h3
+      data-testid="chat-title"
+    >
+      Welcome to My Chat App
+    </h3>
+    <div
+      class="log-out"
+    >
+      <input
+        class="logOut-btn"
+        type="button"
+        value="logout"
+      />
+    </div>
+  </div>
+  <article
+    class="Message"
+  >
+    <div
+      class="Message--main"
+      style="overflow: auto; height: 450px;"
+    >
+      <ul
+        class="Uol"
+      >
+        <li>
+          <h4
+            class="Message--user"
+          >
+            ahmad
+          </h4>
+          <p
+            class="Message--content"
+          />
+        </li>
+      </ul>
+      <div />
+    </div>
+  </article>
+  <input
+    class="message-field"
+    placeholder="Type your messege and hit ENTER"
+    type="text"
+    value=""
+  />
+</div>
+`;
+
 exports[`should test for sign up  1`] = `
 <div>
   <div

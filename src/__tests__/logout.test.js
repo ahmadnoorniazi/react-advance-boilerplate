@@ -17,7 +17,7 @@ beforeEach(() => {
   window.localStorage.setItem(key, JSON.stringify([fakeData]));
 });
 
-test("should test for sign up ", () => {
+test("should test for logout ", () => {
   const store = createStore(reducer);
   window.HTMLElement.prototype.scrollIntoView = function() {};
   window.alert = function() {};

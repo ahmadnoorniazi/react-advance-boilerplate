@@ -31,6 +31,6 @@ test("should test for sign up ", () => {
   fireEvent.submit(SubmitNode);
   expect(SubmitNode.type).toBe("submit");
   expect(fakeHistory.push).toHaveBeenCalledTimes(1);
-  expect(fakeHistory.push).toHaveBeenCalledWith("/login");
+  expect(fakeHistory.push).toHaveBeenCalledWith('/login');
   expect(container.firstChild).toMatchSnapshot();
 });
