@@ -1,0 +1,10 @@
+# external libs
+lib
+public
+build
+contentful
+internals
+
+*mock.js
+*test.js
+*.config.js
