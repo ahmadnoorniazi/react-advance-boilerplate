@@ -1,0 +1,13 @@
+{
+  "exclude": ["**/node_modules/*", "build", "coverage"],
+  "compilerOptions": {
+    "rootDirs": [
+      "src"
+    ],
+    "baseUrl": "./",
+    "jsx":"react",
+    "paths": {
+      "*": ["src/*"],
+    }
+  },
+}
