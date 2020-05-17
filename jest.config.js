@@ -1,12 +1,14 @@
+const path = require('path')
+const here = (...p) => path.join(__dirname, ...p);
+
 module.exports = {
   verbose: true,
   testEnvironment: 'jsdom',
   moduleNameMapper: {
-    // module must come first
-    '\\.module\\.scss$': 'identity-obj-proxy',
-    '\\.scss$': require.resolve('./src/__mocks__/style-mock')
-    // can also map files that are loaded by webpack with the file-loader
+    '.+\\.(css|styl|less|sass|scss)$': `identity-obj-proxy`,
+    '.+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': `<rootDir>/src/__mock__/file-mock.js`,
   },
+  testPathIgnorePatterns: [`node_modules`, `.cache`],
   coverageThreshold: {
     global: {
       statements: 80,
@@ -15,5 +17,6 @@ module.exports = {
       lines: 80
     }
   },
-  projects: ['./src'],
-  setupFilesAfterEnv: ['./src/setupTests.js']
+  roots: ['./src'],
+  setupFilesAfterEnv: [here('./setupTests.js')],
+};
